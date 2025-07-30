@@ -7,12 +7,21 @@
   z-index: 10;
   background-color: $color-white;
 
+  @include vp-1439  {
+    padding: 12px 0;
+  }
+
   &__top {
     align-items: center;
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr 320px 1fr;
     margin: 0 0 20px 0;
+
+    @include vp-1439  {
+      margin: 0;
+      grid-template-columns: 1fr 284px 1fr;
+    }
   }
   
   &__contacts {
@@ -64,6 +73,13 @@
       outline-offset: 2px;
     }
   }
+
+  &__logo svg{
+    @include vp-1439  {
+      width: 284px;
+      height: 50px;
+    }
+  }
   
   &__users {
     align-items: center;
@@ -71,6 +87,13 @@
     justify-content: flex-end;
     gap: 35px;
   }
+
+  &__search {
+   @include vp-1439 {
+    display: none;
+   }
+  }
+
   
   &__user-list {
     align-items: center;
@@ -84,6 +107,10 @@
   &__user-item  {
     &:last-child{
      display: none; 
+
+     @include vp-1439 {
+      display: flex;
+     }
     }
   }
   
@@ -129,7 +156,18 @@
     width: 17px;
   }
   
-  /*&__burger {
+  &__burger {
     display: none;
-  }*/
+
+    @include vp-1439  {
+      display: flex;
+      width: 38px;
+      height: 38px;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+    }
+  }
 }
