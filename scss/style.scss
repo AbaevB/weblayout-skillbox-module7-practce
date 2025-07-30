@@ -1,6 +1,11 @@
 /* Global */
 /* ------------------------------------ */
+
+/* Variables and mixins*/
+/* ------------------------------------ */
 @import "global/_variables";
+@import "global/mixins";
+/* ------------------------------------ */
 @import "global/_fonts";
 @import "global/_reboot";
 @import "global/_container";
