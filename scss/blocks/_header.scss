@@ -6,6 +6,7 @@
   left: 0;
   z-index: 10;
   background-color: $color-white;
+  z-index: 20;
 
   @include vp-1439  {
     padding: 12px 0;
