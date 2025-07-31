@@ -7,12 +7,29 @@
   z-index: 10;
   background-color: $color-white;
 
+  @include vp-1439  {
+    padding: 12px 0;
+  }
+
+  @include vp-767 {
+    padding: 15px 0;
+  }
+
   &__top {
     align-items: center;
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr 320px 1fr;
     margin: 0 0 20px 0;
+
+    @include vp-1439  {
+      margin: 0;
+      grid-template-columns: 1fr 284px 1fr;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 228px 1fr;
+    }
   }
   
   &__contacts {
@@ -20,6 +37,14 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    @include vp-1439  {
+      gap: 5px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
   }
   
   &__phone {
@@ -64,6 +89,18 @@
       outline-offset: 2px;
     }
   }
+
+  &__logo svg{
+    @include vp-1439  {
+      width: 284px;
+      height: 50px;
+    }
+
+    @include vp-767{
+      width: 228px;
+      height: 40px;
+    }
+  }
   
   &__users {
     align-items: center;
@@ -71,6 +108,13 @@
     justify-content: flex-end;
     gap: 35px;
   }
+
+  &__search {
+   @include vp-1439 {
+    display: none;
+   }
+  }
+
   
   &__user-list {
     align-items: center;
@@ -79,6 +123,23 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
+  }
+
+  &__user-item  {
+    &:last-child{
+     display: none; 
+
+     @include vp-1439 {
+      display: flex;
+     }
+    }
+
+
+    &:not(:last-child){
+      @include vp-767 {
+        display: none;
+      }
+    }
   }
   
   &__user-link {
@@ -125,5 +186,16 @@
   
   &__burger {
     display: none;
+
+    @include vp-1439  {
+      display: flex;
+      width: 38px;
+      height: 38px;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+    }
   }
 }
