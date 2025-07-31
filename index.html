@@ -113,7 +113,7 @@
     </nav>
   </header>
   <main>
-    <!--<section class="hero">
+    <section class="hero">
       <div class="container">
         <h1 class="visually-hidden">Интернет магазин комнатный растений "Зеленый пассажир"</h1>
         <div class="hero__wrapper">
@@ -125,8 +125,12 @@
           </div>
           <ul class="hero__gallery-list">
             <li class="hero__gallery-item hero__gallery-item--size-xl">
-              <img class="hero__gallery-image" src="images/gallery-1.png" srcset="images/gallery-1@2x.png 2x"
-                  height="490" width="305" alt="Изображение комнатного растения">
+              <picture>
+                  <source media="(max-width: 767px)" srcset="images/gallery-1-mobile.png 1x, images/gallery-1-mobile@2x.png 2x" >
+                  <img class="hero__gallery-image" src="images/gallery-1.png" srcset="images/gallery-1@2x.png 2x" height="490" width="305" alt="Изображение комнатного растения">
+
+              </picture>
+              
             </li>
             <li class="hero__gallery-item">
               <img class="hero__gallery-image" src="images/gallery-2.png" srcset="images/gallery-2@2x.png 2x"
@@ -139,7 +143,7 @@
           </ul>
         </div>
       </div>
-    </section>-->
+    </section>
     <!--<section class="about-company">
       <div class="container">
         <h2 class="visually-hidden">О компании</h2>
