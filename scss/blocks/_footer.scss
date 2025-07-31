@@ -29,9 +29,7 @@
   }
   
   &__nav-list {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
+    @include list-reset;
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 20px 71px;

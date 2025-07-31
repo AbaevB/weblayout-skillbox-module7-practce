@@ -11,6 +11,10 @@
     padding: 12px 0;
   }
 
+  @include vp-767 {
+    padding: 15px 0;
+  }
+
   &__top {
     align-items: center;
     display: grid;
@@ -22,6 +26,10 @@
       margin: 0;
       grid-template-columns: 1fr 284px 1fr;
     }
+
+    @include vp-767 {
+      grid-template-columns: 228px 1fr;
+    }
   }
   
   &__contacts {
@@ -32,6 +40,10 @@
 
     @include vp-1439  {
       gap: 5px;
+    }
+
+    @include vp-767 {
+      display: none;
     }
   }
   
@@ -83,6 +95,11 @@
       width: 284px;
       height: 50px;
     }
+
+    @include vp-767{
+      width: 228px;
+      height: 40px;
+    }
   }
   
   &__users {
@@ -115,6 +132,13 @@
      @include vp-1439 {
       display: flex;
      }
+    }
+
+
+    &:not(:last-child){
+      @include vp-767 {
+        display: none;
+      }
     }
   }
   
