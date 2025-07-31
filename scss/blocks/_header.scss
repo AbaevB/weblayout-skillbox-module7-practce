@@ -29,10 +29,12 @@
 
     @include vp-767 {
       grid-template-columns: 228px 1fr;
+      margin-bottom: 36px;
     }
   }
   
   &__contacts {
+    width: 158px;
     align-items: flex-start;
     display: flex;
     flex-direction: column;
