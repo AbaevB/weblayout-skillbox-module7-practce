@@ -95,6 +95,11 @@ input[type=search]::-webkit-search-results-decoration {
   padding: 0 110px;
   margin: 0 auto;
 }
+@media (max-width: 1439px) {
+  .container {
+    padding: 0 30px;
+  }
+}
 @media (max-width: 767px) {
   .container {
     padding: 0 15px;
@@ -551,6 +556,13 @@ input[type=search]::-webkit-search-results-decoration {
   line-height: 18px;
   font-family: inherit;
 }
+@media (max-width: 1439px) {
+  .btn {
+    font-size: 15px;
+    line-height: 20px;
+    padding: 14px;
+  }
+}
 .btn:hover {
   color: #ffffff;
   background-color: #502198;
@@ -573,7 +585,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media (max-width: 767px) {
   .btn--size-xl {
-    padding: 14px;
+    padding: 13px;
     font-size: 12px;
     line-height: 14px;
   }
@@ -753,14 +765,26 @@ input[type=search]::-webkit-search-results-decoration {
 .about-company {
   margin: 0 0 70px;
 }
-
+@media (max-width: 1439px) {
+  .about-company {
+    margin: 0 0 40px;
+  }
+}
 .about-company__wrapper {
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 30px 50px;
   margin: 0 0 50px;
 }
-
+@media (max-width: 1439px) {
+  .about-company__wrapper {
+    position: relative;
+    margin: 0 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
 .about-company__image {
   border-radius: 30px;
   height: 300px;
@@ -768,7 +792,17 @@ input[type=search]::-webkit-search-results-decoration {
   grid-row: 2/3;
   overflow: hidden;
 }
-
+@media (max-width: 1439px) {
+  .about-company__image {
+    position: absolute;
+    right: -30px;
+    bottom: 0;
+    width: 300px;
+    height: 459px;
+    border-radius: 20px 0 0 20px;
+    opacity: 0.15;
+  }
+}
 .about-company__description {
   display: flex;
   flex-direction: column;
@@ -776,7 +810,11 @@ input[type=search]::-webkit-search-results-decoration {
   grid-column: 2/3;
   grid-row: span 2;
 }
-
+@media (max-width: 1439px) {
+  .about-company__description {
+    gap: 25px;
+  }
+}
 .about-company__text {
   font-size: 24px;
   line-height: 32px;
@@ -784,20 +822,29 @@ input[type=search]::-webkit-search-results-decoration {
   font-weight: 400;
   color: #475009;
 }
-
+@media (max-width: 1439px) {
+  .about-company__text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
 .about-company__list {
-  margin: 0 0 44px;
+  margin: 0;
   padding: 0;
-  list-style-type: none;
+  list-style: none;
+  margin: 0 0 44px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
-
+@media (max-width: 1439px) {
+  .about-company__list {
+    margin: 0 0 27px;
+  }
+}
 .about-company__item--size-xl {
   grid-column: 1/-1;
 }
-
 .about-company__card-text {
   padding: 32px 25px;
   background-color: #F4F6FA;
@@ -808,7 +855,13 @@ input[type=search]::-webkit-search-results-decoration {
   height: 100%;
   color: #475009;
 }
-
+@media (max-width: 1439px) {
+  .about-company__card-text {
+    padding: 25px 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
 .about-company__btn {
   margin: 0 auto;
   width: 280px;
@@ -874,7 +927,11 @@ input[type=search]::-webkit-search-results-decoration {
   border-radius: 20px;
   background-color: #F4F6FA;
 }
-
+@media (max-width: 1439px) {
+  .aside-nav {
+    padding: 20px;
+  }
+}
 .aside-nav__heading {
   font-size: 18px;
   line-height: 24px;
@@ -883,28 +940,56 @@ input[type=search]::-webkit-search-results-decoration {
   text-align: center;
   color: #475009;
 }
-
+@media (max-width: 1439px) {
+  .aside-nav__heading {
+    margin: 0 0 20px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
 .aside-nav__list {
   margin: 0;
   padding: 0;
-  list-style-type: none;
+  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 23px;
 }
-
+@media (max-width: 1439px) {
+  .aside-nav__list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+}
 .aside-nav__link {
   display: flex;
   align-items: center;
   gap: 30px;
 }
-
+@media (max-width: 1439px) {
+  .aside-nav__link {
+    gap: 10px;
+  }
+}
+@media (max-width: 1439px) {
+  .aside-nav__link svg {
+    width: 30px;
+    height: 45px;
+  }
+}
 .aside-nav__link-text {
   font-size: 20px;
   line-height: 20px;
   font-weight: 700;
   text-transform: uppercase;
   color: #475009;
+}
+@media (max-width: 1439px) {
+  .aside-nav__link-text {
+    font-size: 15px;
+    line-height: 20px;
+  }
 }
 
 .social {
