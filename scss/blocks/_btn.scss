@@ -19,6 +19,11 @@
     padding: 14px;
   }
 
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
   &:hover {
     color: $color-white;
     background-color: $color-daisy-bush;
